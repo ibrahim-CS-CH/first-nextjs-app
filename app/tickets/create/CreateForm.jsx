@@ -5,12 +5,13 @@ import { useRouter } from 'next/navigation'
 
 export default function CreateForm() {
     const router = useRouter();
-    console.log(router);
+
     const [title, setTitle] = useState("")
     const [body, setBody] = useState("")
     const [priority, setPriority] = useState("low")
     const [isLoading, setIsLaoding] = useState(false);
 
+    
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLaoding(true);
